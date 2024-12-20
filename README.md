@@ -520,7 +520,7 @@ Also, please add citations for other items associated with the described pipelin
 ```bibtex
 @dataset{aimmuno-analysis-files,
   author    = {Mastromattei, Michele and Palkowski, Aleksander and Nourbakhsh, Aria and Alfaro, Javier Antonio and Zanzotto, Fabio Massimo},
-  title     = {Artificial intelligence perceives marginal gains from MHC haplotype data: analysis and datasets that challenge models},
+  title     = {{Artificial intelligence perceives marginal gains from MHC haplotype data: analysis and datasets that challenge models}},
   month     = {dec},
   year      = {2024},
   publisher = {Zenodo},
@@ -530,7 +530,7 @@ Also, please add citations for other items associated with the described pipelin
 }
 @software{aimmuno-analysis-code,
   author    = {Mastromattei, Michele and Palkowski, Aleksander and Nourbakhsh, Aria and Alfaro, Javier Antonio and Zanzotto, Fabio Massimo},
-  title     = {AImmuno: A pipeline for testing various MHC class I antigen binding prediction models},
+  title     = {{AImmuno: A pipeline for testing various MHC class I antigen binding prediction models}},
   month     = {dec},
   year      = {2024},
   publisher = {Zenodo},
