@@ -117,9 +117,10 @@ Open the `scripts/3_training_and_testing_with_hla_carmen_data.ipynb` Jupyter not
 Here, we create two datasets with randomly-generated sequences and modified pairs of amino acids: the "easy" dataset with matching pairs, and the "hard" dataset with mismatches. Use the `scripts/4_synthetic_data_preparation.py` script with the following parameters to produce them:
 
 ```bash
-python scripts/4_synthetic_data_preparation.py --sample_num 100_000 --decoys 1 --peptide_min 9 --peptide_max 12 --mhc_min 20 --mhc_max 40 --out_dir "data/datasets/synthetic_easy"
-
-python scripts/4_synthetic_data_preparation.py --sample_num 100_000 --decoys 1 --peptide_min 9 --peptide_max 12 --mhc_min 20 --mhc_max 40 --random_decoy --out_dir "data/datasets/synthetic_hard"
+cd scripts
+python 4_synthetic_data_preparation.py --sample_num 100_000 --decoys 1 --peptide_min 9 --peptide_max 12 --mhc_min 20 --mhc_max 40 --out_dir "../data/datasets/synthetic_easy"
+python 4_synthetic_data_preparation.py --sample_num 100_000 --decoys 1 --peptide_min 9 --peptide_max 12 --mhc_min 20 --mhc_max 40 --out_dir "../data/datasets/synthetic_hard" --hard_case
+cd ..
 ```
 
 **This step will produce completely randomized datasets and alter the results for the machine learning models. If you want to exactly reproduce the paper's results, skip this step and use the datasets provided in [the data repository](X) to train and test the models.**
