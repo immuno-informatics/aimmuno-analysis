@@ -141,7 +141,7 @@ To run this step, open the `scripts/7_testing_models.ipynb` Jupyter notebook and
 
 ### TransPHLA Model
 
-Following subsequent steps requires making multiple changes to a source [TransPHLA-AOMP](https://github.com/a96123155/TransPHLA-AOMP) script. Please, make two copies of the `/path/to/TransPHLA-AOMP/Procedure Code/pHLAIformer.ipynb` Jupyter notebook and name them `pHLAIformer_src.ipynb` and `pHLAIformer_synthetic.ipynb` for clarity.
+Following subsequent steps require making adjustments to a source [TransPHLA-AOMP](https://github.com/a96123155/TransPHLA-AOMP) script to avoid publishing edited versions of the original code. Please, make two copies of the `/path/to/TransPHLA-AOMP/Procedure Code/pHLAIformer.ipynb` Jupyter notebook and name them `pHLAIformer_src.ipynb` and `pHLAIformer_synthetic.ipynb` for clarity.
 
 #### Source Data
 
