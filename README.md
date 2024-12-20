@@ -1,6 +1,6 @@
 # AImmuno: A pipeline for testing various MHC class I antigen binding prediction models
 
-[![CARMEN immunopeptidomics database](https://zenodo.org/badge/DOI/10.5281/zenodo.13928441.svg)](https://doi.org/10.5281/zenodo.13928441)
+[![AImmuno analysis data](https://zenodo.org/badge/DOI/10.5281/zenodo.14526105.svg)](https://doi.org/10.5281/zenodo.14526105)
 
 > Analysis and data generation pipeline for the "[Artificial Intelligence Perceives Marginal Gains from MHC Haplotype Data in Antigen Presentation Predictions](https://www.google.com)" paper (in peer review).
 
