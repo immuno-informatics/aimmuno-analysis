@@ -534,7 +534,7 @@ Also, please add citations for other items associated with the described pipelin
   month     = {dec},
   year      = {2024},
   publisher = {Zenodo},
-  version   = {v1.0.0},
+  version   = {v1.0.1},
   doi       = {10.5281/zenodo.14536592},
   url       = {https://doi.org/10.5281/zenodo.14536592}
 }
