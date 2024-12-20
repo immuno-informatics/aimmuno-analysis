@@ -1,6 +1,6 @@
 # AImmuno: A pipeline for testing various MHC class I antigen binding prediction models
 
-[![AImmuno analysis data](https://zenodo.org/badge/DOI/10.5281/zenodo.14526105.svg)](https://doi.org/10.5281/zenodo.14526105)
+[![AImmuno analysis code](https://zenodo.org/badge/DOI/10.5281/zenodo.14536592.svg)](https://doi.org/10.5281/zenodo.14536592) [![AImmuno analysis data](https://zenodo.org/badge/DOI/10.5281/zenodo.14526105.svg)](https://doi.org/10.5281/zenodo.14526105)
 
 > Analysis and data generation pipeline for the "[Artificial Intelligence Perceives Marginal Gains from MHC Haplotype Data in Antigen Presentation Predictions](https://www.google.com)" paper (in peer review).
 
@@ -528,16 +528,15 @@ Also, please add citations for other items associated with the described pipelin
   doi       = {10.5281/zenodo.14526105},
   url       = {https://doi.org/10.5281/zenodo.14526105}
 }
-@article{aimmuno-analysis-code,
-  author  = {Surname, Name},
-  title   = {{AImmuno analysis code}},
-  journal = {X},
-  year    = {X},
-  volume  = {X},
-  number  = {X},
-  pages   = {X--X},
-  doi     = {X},
-  url     = {}
+@software{aimmuno-analysis-code,
+  author    = {Mastromattei, Michele and Palkowski, Aleksander and Nourbakhsh, Aria and Alfaro, Javier Antonio and Zanzotto, Fabio Massimo},
+  title     = {AImmuno: A pipeline for testing various MHC class I antigen binding prediction models},
+  month     = {dec},
+  year      = {2024},
+  publisher = {Zenodo},
+  version   = {v1.0.0},
+  doi       = {10.5281/zenodo.14536592},
+  url       = {https://doi.org/10.5281/zenodo.14536592}
 }
 ```
 
