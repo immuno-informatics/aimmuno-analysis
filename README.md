@@ -140,7 +140,7 @@ This is an optional convenience script to easily test and visually compare TAPE-
 To run this step, open the `scripts/7_testing_models.ipynb` Jupyter notebook and follow its structure and instructions. By changing which line is left uncommented in cell no. 3 we can select the type of model to be tested.
 
 ### TransPHLA Model
-
+a
 Following subsequent steps require making adjustments to a source [TransPHLA-AOMP](https://github.com/a96123155/TransPHLA-AOMP) script to avoid publishing edited versions of the original code. Please, make two copies of the `/path/to/TransPHLA-AOMP/Procedure Code/pHLAIformer.ipynb` Jupyter notebook and name them `pHLAIformer_src.ipynb` and `pHLAIformer_synthetic.ipynb` for clarity.
 
 #### Source Data
