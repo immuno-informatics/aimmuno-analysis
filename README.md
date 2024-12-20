@@ -1,8 +1,10 @@
-# AImmuno Analysis
+# Artificial intelligence perceives marginal gains from MHC haplotype data: analysis and datasets that challenge models
 
 [![CARMEN immunopeptidomics database](https://zenodo.org/badge/DOI/10.5281/zenodo.13928441.svg)](https://doi.org/10.5281/zenodo.13928441)
 
-> Analysis and data generation pipeline for the "[Artificial Intelligence Perceives Marginal Gains from MHC Haplotype Data in Antigen Presentation Predictions](https://www.google.com)" paper.
+> Analysis and data generation pipeline for the "[Artificial Intelligence Perceives Marginal Gains from MHC Haplotype Data in Antigen Presentation Predictions](https://www.google.com)" paper (in peer review).
+
+Supporting data and results can be found in the [paper data repository](https://doi.org/10.5281/zenodo.14526105).
 
 ## Setup
 
@@ -55,7 +57,7 @@ And subsequently move it to the `data` directory.
 
 #### Initial Data and Results Related to the Paper
 
-To recreate all the results and models from scratch, we need to download a set of files that were used as input for specific stages of the analysis. Please download the contents of the [paper data repository](X) and unpack them to the `data` directory.
+To recreate all the results and models from scratch, we need to download a set of files that were used as input for specific stages of the analysis. Please download the contents of the [paper data repository](https://doi.org/10.5281/zenodo.14526105) and unpack them to the `data` directory.
 
 ### External Code and Data
 
@@ -100,7 +102,7 @@ To be able to reproduce the entire analysis, we need to set-up and run specific 
 
 Open the `scripts/1_carmen_data_preparation.ipynb` Jupyter notebook and follow its structure and instructions. By changing which set of lines is left uncommented in cell no. 3 we can select the type of experimental dataset to be produced.
 
-**This step will produce completely randomized datasets and alter the results for the machine learning models. If you want to exactly reproduce the paper's results, skip this step and use the datasets provided in [the data repository](X) to train and test the models.**
+**This step will produce completely randomized datasets and alter the results for the machine learning models. If you want to exactly reproduce the paper's results, skip this step and use the datasets provided in [the data repository](https://doi.org/10.5281/zenodo.14526105) to train and test the models.**
 
 ##### 2. Create and Test Models Without Using HLA Sequences
 
@@ -123,7 +125,7 @@ python 4_synthetic_data_preparation.py --sample_num 100_000 --decoys 1 --peptide
 cd ..
 ```
 
-**This step will produce completely randomized datasets and alter the results for the machine learning models. If you want to exactly reproduce the paper's results, skip this step and use the datasets provided in [the data repository](X) to train and test the models.**
+**This step will produce completely randomized datasets and alter the results for the machine learning models. If you want to exactly reproduce the paper's results, skip this step and use the datasets provided in [the data repository](https://doi.org/10.5281/zenodo.14526105) to train and test the models.**
 
 ##### 5. Create and Test Models Without Using HLA Sequences
 
@@ -140,7 +142,7 @@ This is an optional convenience script to easily test and visually compare TAPE-
 To run this step, open the `scripts/7_testing_models.ipynb` Jupyter notebook and follow its structure and instructions. By changing which line is left uncommented in cell no. 3 we can select the type of model to be tested.
 
 ### TransPHLA Model
-a
+
 Following subsequent steps require making adjustments to a source [TransPHLA-AOMP](https://github.com/a96123155/TransPHLA-AOMP) script to avoid publishing edited versions of the original code. Please, make two copies of the `/path/to/TransPHLA-AOMP/Procedure Code/pHLAIformer.ipynb` Jupyter notebook and name them `pHLAIformer_src.ipynb` and `pHLAIformer_synthetic.ipynb` for clarity.
 
 #### Source Data
@@ -364,6 +366,8 @@ Open the newly-created `pHLAIformer_synthetic.ipynb` Jupyter notebook and make t
     pep_max_len = 13
     ```
 
+    Note: this variable, as well as the `hla_max_len` variable, are dependent on the actual maximum lengths of peptide and HLA sequences, respectively, within the datasets. This configuration is tuned to the data published in the [data repository](https://doi.org/10.5281/zenodo.14526105) and should be changed if the data change. `pep_max_len` should be set to maximum peptide length + 1, while `hla_max_len` to exactly the maximum HLA sequence length.
+
 5. Change line no. 6 of cell no. 10 to the following:
 
     ```python
@@ -467,11 +471,29 @@ Open the newly-created `pHLAIformer_synthetic.ipynb` Jupyter notebook and make t
     metrics_ep_avg = np.nansum(metrics_val[:4]) / 4
     ```
 
-15. After line no. 67 of cell no. 15 add the following line (should be inside the first `for` loop):
+15. Comment out line no. 54 of cell no. 15.
+
+16. Comment out line no. 59 of cell no. 15.
+
+17. Change line no. 62 of cell no. 15 to the following:
+
+    ```python
+    ys_train_fold_dict[fold], ys_val_fold_dict[fold], ys_external_fold_dict[fold] = ys_res_train, ys_res_val, ys_res_external
+    ```
+
+18. Change line no. 64 of cell no. 15 to the following:
+
+    ```python
+    loss_train_fold_dict[fold], loss_val_fold_dict[fold], loss_external_fold_dict[fold] = loss_res_train_list, loss_res_val_list, loss_res_external_list
+    ```
+
+19. After line no. 67 of cell no. 15 add the following line (should be inside the first `for` loop):
 
     ```python
     save_results()
     ```
+
+20. Comment out lines no. 1 and 2 of cell no. 16.
 
 Now, by changing which line is left uncommented in cell no. 4 (`dataset_type` definitions) we can train and test different models.
 
@@ -496,16 +518,15 @@ Please cite the described work and relevant paper as:
 Also, please add citations for other items associated with the described pipeline as:
 
 ```bibtex
-@article{aimmuno-analysis-files,
-  author  = {Surname, Name},
-  title   = {{AImmuno analysis files}},
-  journal = {X},
-  year    = {X},
-  volume  = {X},
-  number  = {X},
-  pages   = {X--X},
-  doi     = {X},
-  url     = {}
+@dataset{aimmuno-analysis-files,
+  author    = {Mastromattei, Michele and Palkowski, Aleksander and Nourbakhsh, Aria and Alfaro, Javier Antonio and Zanzotto, Fabio Massimo},
+  title     = {Artificial intelligence perceives marginal gains from MHC haplotype data: analysis and datasets that challenge models},
+  month     = {dec},
+  year      = {2024},
+  publisher = {Zenodo},
+  version   = {1.0.0},
+  doi       = {10.5281/zenodo.14526105},
+  url       = {https://doi.org/10.5281/zenodo.14526105}
 }
 @article{aimmuno-analysis-code,
   author  = {Surname, Name},
