@@ -1,4 +1,4 @@
-# Artificial intelligence perceives marginal gains from MHC haplotype data: analysis and datasets that challenge models
+# AImmuno: A pipeline for testing various MHC class I antigen binding prediction models
 
 [![CARMEN immunopeptidomics database](https://zenodo.org/badge/DOI/10.5281/zenodo.13928441.svg)](https://doi.org/10.5281/zenodo.13928441)
 
